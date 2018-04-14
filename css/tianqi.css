@@ -1,0 +1,531 @@
+/*
+* @Author: lenovo
+* @Date:   2018-03-24 08:33:42
+* @Last Modified by:   lenovo
+* @Last Modified time: 2018-04-11 11:39:43
+*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+bady{
+	background: #f4f4f4;
+}
+header{
+	width: 100%;
+	height: 4.7rem;
+	background: url('../img/screen.png') no-repeat  center bottom,-webkit-linear-gradient(top,#3BBDFF,#47EAFF);
+	background-size: contain;
+	overflow: hidden;
+}
+.city{
+	font-size: 0.16rem;
+	line-height: 0.24rem;
+	color: #fff;
+	text-align: center;
+	margin-top: 0.14rem;
+	font-weight: bold;
+}
+.box{
+	width: 0.8rem;
+	height: 0.5rem;
+	background: #f1ab62;
+	border-radius: 0.08rem;
+	margin-top: 0.29rem;
+	margin-left: 0.08rem;
+	overflow: hidden;
+}
+.box h2{
+	font-size: 0.12rem;
+	color: #fff;
+	text-align: center;
+	line-height: 0.16rem;
+	margin-top: 0.06rem;
+
+}
+.box h3{
+	font-size: 0.12rem;
+	color: #fff;
+	text-align: center;
+	line-height: 0.16rem;
+	margin-top: 0.06rem;
+}
+.tempature{
+	font-size: 0.46rem;
+	color: #fff;
+	line-height: 0.63rem;
+	margin-top: 0.05rem;
+/* 	text-align: center; */
+	margin-left: 2.22rem;
+
+}
+.condition{
+	font-size: 0.2rem;
+	color: #fff;
+	line-height: 0.38rem;
+	text-align: center;
+}
+.humidity{
+	width: 0.82rem;
+	height: 0.2rem;
+/* 	background: red; */
+	margin: 0 auto;
+}
+.humidity span{
+	font-size: 0.14rem;
+	color: #fff;
+	line-height: 0.2rem;
+	float: left;
+}
+.humidity div{
+	font-size: 0.14rem;
+	color: #fff;
+	line-height: 0.2rem;
+	float: left;
+	margin-left: 0.04rem;
+}
+.anhao_box{
+	width: 1.84rem;
+	height: 0.26rem;
+	/* background: red; */
+	margin: 0.44rem auto;
+}
+.anhao_box span{
+	font-size: 0.16rem;
+	color: #fff;
+	/* line-height: 0.2rem; */
+	float: left;
+}
+.days{
+	width: 100%;
+	height: 1.02rem;
+	background: #fff;
+	border-bottom: 0.01rem solid #e4e4e4;
+	overflow: hidden;
+	margin-bottom: 0.01rem;
+}
+.days_box{
+	width: 4.61rem;
+	height: 0.52rem;
+	/* background: red; */
+	margin: 0 auto;
+	margin-top: 0.26rem;
+	display: flex;
+
+}
+.today{
+	width: 2.3rem;
+	height: 0.52rem;
+	/* background: pink; */
+	border-right: 0.01rem solid #f0f0f0;
+	padding-right: 0.21rem;
+	box-sizing: border-box;
+}
+.tomorrow{
+	width: 2.3rem;
+	height: 0.52rem;
+	padding-left: 0.19rem;
+	/* background: yellow; */
+	box-sizing: border-box;
+}
+.top{
+	width: 100%;
+	height: 0.2rem;
+	/* background: #58a; */
+	margin-bottom: 0.04rem;
+
+	display: flex;
+	justify-content: space-between;
+}
+.bottom{
+	width: 100%;
+	height: 0.32rem;
+	/* background: green; */
+	display: flex;
+	justify-content: space-between;
+}
+.text{
+	font-size: 0.14rem;
+	color: #434343;
+}
+.temperature_box{
+/* 	width: 0.36rem; */
+	height: 0.16rem;
+/* 	background: red; */
+	margin-right: 0.2rem;
+
+}
+.temperature_box span{
+	font-size: 0.12rem;
+	color: #434343;
+	float: left;
+}
+.bottom span{
+	font-size: 0.14rem;
+	color: #434343;
+	line-height: 0.32rem;
+}
+.bottom div{
+	width: 0.18rem;
+	height: 0.18rem;
+	/* background: red; */
+	margin-right: 0.22rem;
+	margin-top: 0.07rem;
+	background: url('../img/0.png') no-repeat center;
+	background-size: cover;
+}
+.bottom .tomorrow_img{
+	background: url('../img/1.png') no-repeat center;
+	background-size: cover;
+}
+.hours{
+	width: 100%;
+	height: 1.35rem;
+	background: #fff;
+	border-bottom: 0.01rem solid #e4e4e4;
+	/* 超出部分分的设置  水平方向 */
+	overflow-x: auto;
+	padding-top: 0.31rem;
+	box-sizing: border-box;
+}
+.hours::-webkit-scrollbar{
+	height: 0;
+}
+.wrap{
+	/* width: 10rem; */
+	height: 0.77rem;
+	/* background: red; */
+	display: flex;
+}
+.wrap .now{
+	width: 0.77rem;
+	height: 0.77rem;
+	/* . */
+	flex-shrink: 0;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.now .now_time{
+	width: 100%;
+	font-size: 0.12rem;
+	color: #999;
+	text-align: center;
+}
+.now .now_icon{
+	width: 0.22rem;
+	height: 0.22rem;
+	background: url('../img/0.png') no-repeat center;
+	background-size: cover;
+	margin: 0 auto;
+}
+.now .now_temp{
+	width: 100%;
+	font-size: 0.12rem;
+	color: #999;
+	text-align: center;
+}
+.recent{
+	width: 100%;
+	height: 3.91rem;
+	/* background: red; */
+	margin-top: 0.01rem;
+	border-top: 0.01rem solid #e4e4e4;
+	border-bottom: 0.01rem solid #e4e4e4;
+	padding-top: 0.25rem;
+	box-sizing: border-box;
+	overflow-x: auto;
+}
+.recent::-webkit-scrollbar{
+	height: 0;
+}
+.warp1{
+	/* width: 10rem; */
+	height: 3.37rem;
+	/* background: pink; */
+	/* 弹性布局 */
+	display: flex;
+}
+.con{
+	width: 0.82rem;
+	height: 100%;
+	/* background: yellow; */
+	/* 禁止缩小 */
+	text-align: center;
+	flex-shrink: 0;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.con_date{
+	width: 100%;
+	height: 0.14rem;
+	/* background: green; */
+	font-size: 0.14rem;
+	color: #b2b2b2;
+	/* float: left; */
+	line-height: 0.14rem
+}
+/* .con_date span{
+	font-size: 0.14rem;
+	color: #b2b2b2;
+	float: left;
+	line-height: 0.14rem; */
+/* } */
+.con_date span:first-child{
+	margin-left: 0.26rem;
+}
+.con_weaH{
+	width: 100%;
+	font-size: 0.14rem;
+	color: #b2b2b2;
+	text-align: center;
+}
+.con_picH{
+	width: 0.22rem;
+	height: 0.22rem;
+	/* background: blue; */
+	margin: 0 auto;
+	background: url('../img/0.png') no-repeat center;
+	background-size: cover;
+
+}
+.con_high{
+	width: 100%;
+	font-size: 0.14rem;
+	color: #b2b2b2;
+	text-align: center;
+}
+.con_low{
+	width: 100%;
+	font-size: 0.14rem;
+	color: #b2b2b2;
+	text-align: center;
+}
+.con_picl{
+	width: 0.22rem;
+	height: 0.22rem;
+	/* background: blue; */
+	margin: 0 auto;
+	background: url('../img/0.png') no-repeat center;
+	background-size: cover;
+}
+.con_weaL{
+	width: 100%;
+	font-size: 0.14rem;
+	color: #b2b2b2;
+	text-align: center;
+}
+.con_wind{
+	width: 100%;
+	font-size: 0.14rem;
+	color: #b2b2b2;
+	text-align: center;
+}
+.con_level{
+	width: 100%;
+	font-size: 0.14rem;
+	color: #b2b2b2;
+	text-align: center;
+}
+
+
+/*热门城市 开始*/
+.city-option{
+	/* 使元素消失 */
+	display: none;
+	/* 使元素出现 */
+	/*  display: block;  */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	/* height: 9rem; */
+	background-color: #fff;
+	margin-top: 0.45rem;
+}
+.city-option .search{
+	width: 100%;
+	height: 0.45rem;
+	padding-top:0.07rem;
+	padding-left:0.13rem;
+	border-bottom:1px solid #eee;
+	box-sizing:border-box;
+}
+.city-option .search .s-left{
+	position: relative;
+	float: left;
+	width: 4.27rem;
+	height: 0.3rem;	
+}
+.city-option .search .s-left i{
+	position: absolute;
+	left: 0.1rem;
+	top: 0.08rem;
+	width: 0.14rem;
+	height: 0.14rem;
+	color:#a9a9a9;
+}
+.city-option .search .s-left input{
+	float: left;
+	width: 100%;
+	height: 100%;
+	border:none;
+	padding-left:0.38rem;
+	border-radius:0.15rem;
+	background-color: #f2f2f2;
+	font-size: 0.14rem;
+	line-height: 0.14rem;
+	outline:none;
+	box-sizing:border-box;
+}
+.city-option .search .s-left input::placeholder{
+	color:#a9a9a9;
+}
+.city-option .search .s-right{
+	float: left;
+	margin-left: 0.16rem;
+	color:#434343;
+	font-size: 0.14rem;
+	line-height: 0.3rem;
+}
+/*选择城市 结束*/
+
+/*城市列表 开始*/
+.city-list{
+	width: 100%;
+	padding:0.23rem 0.13rem 0;
+	font-size:0.14rem;
+	color:#434343;
+	box-sizing:border-box;
+}
+.city-list p{
+	font-size: 0.16rem;
+	margin-bottom:0.15rem;
+}
+.city-list p:nth-of-type(2){
+	margin-top: 0.11rem;
+}
+.city-list ul{
+	width: 100%;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	
+}
+.city-list ul li{
+	width: 1.52rem;
+	height: 0.32rem;
+	margin-bottom:0.12rem;
+	background-color: #f2f2f2;
+	border-radius:0.16rem;
+	text-align:center;
+	line-height:0.32rem;
+}
+/*热门列表 结束*/
+
+
+
+.search{
+	width: 100%;
+	height: 0.45rem;
+	border-bottom: 0.01rem solid #eeeeee;
+	padding-top: 0.07rem;
+	padding-left: 0.13rem;
+	box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	background: #fff;
+}
+.search_box{
+	width: 4.69rem;
+	height: 0.3rem;
+	/* background: pink; */
+	display: flex;
+	justify-content: space-between;
+
+}
+.search_left{
+	width: 4.27rem;
+	height: 0.3rem;
+	background: #f2f2f2;
+	border-radius: 0.15rem;
+}
+.bth{
+	font-size: 0.14rem;
+	color: #434343;
+	line-height: 0.3rem;
+}
+input{
+	float: right;
+	width: 3.95rem;
+	height: 0.3rem;
+	border: none;
+	background: #f2f2f2;
+	border-top-right-radius: 0.15rem;
+	border-bottom-right-radius: 0.15rem;
+}
+input:focus{
+	outline: none;
+}
+img{
+	float: left;
+	margin-top: 0.08rem;
+	margin-left: 0.1rem;
+}
+/*功能列表开始*/
+.func {
+	/* float: left; */
+	width: 100%;
+	height: 1.88rem;  
+	background: #fff;
+	margin-top: 0.1rem;
+	border: 0.01rem solid #eeeeee;
+	box-sizing: border-box;
+}
+.func-block {
+	float: left;
+	width: 25%;
+	height: 0.94rem;
+	border-right: 0.01rem solid #eeeeee;
+	border-top: 0.01rem solid #eeeeee;
+	box-sizing: border-box;
+}
+.func-block p:first-child{
+	width: 100%;
+	height: 0.18rem;
+	margin-top: 0.18rem;
+}
+.func-block p:first-child img{
+	float: left;
+	height: 0.18rem;
+	width: 0.18rem;
+	margin-left: 0.51rem;
+}
+.func-block p:nth-child(2){
+	text-align: center;
+	width: 100%;
+	height: 0.14rem;
+	font-size: 0.14rem;
+	margin-top: 0.13rem;
+}
+.func-block p:nth-child(3){
+	color: #999999;
+	text-align: center;
+	width: 100%;
+	height: 0.12rem;
+	font-size: 0.12rem;
+	margin-top: 0.06rem;
+}
+.func-block:nth-child(4n){
+	border-right: none;
+}
+/*功能列表结束*/
